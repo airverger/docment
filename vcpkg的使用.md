@@ -60,8 +60,21 @@ ffmpeg provides pkg-config modules:
 
 ```cmake
 
+    find_package(ImGui-SFML CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE ImGui-SFML::ImGui-SFML)
 ```
 
+## spdlog
+
+```cmake
+
+ find_package(spdlog CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE spdlog::spdlog)
+
+    # Or use the header-only version
+    find_package(spdlog CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE spdlog::spdlog_header_only)
+```
 
 echo "# docment" >> README.md
 git init
